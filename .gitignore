@@ -1,0 +1,8 @@
+.idea/
+db.sqlite3
+poetry.lock
+migrations/
+.venv/
+.DS_Store
+.python-version
+__pycache__/
