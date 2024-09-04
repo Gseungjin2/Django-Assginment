@@ -14,15 +14,15 @@
                 {% if request.user.is_authenticated %}
                     <div class="d-flex align-items-center">
                         <span class="navbar-text me-2">{{ request.user.username }}</span>
-                        <form action="{% url 'logout' %}" method="POST" class="d-inline">
+                        <form action="{% url 'cbv_logout' %}" method="POST" class="d-inline">
                             {% csrf_token %}
                             <button class="btn btn-link text-decoration-none" style="font-size: 20px;">Logout</button>
                         </form>
                     </div>
                 {% else %}
                     <div class="d-flex">
-                        <a href="{% url 'signup' %}" class="btn btn-outline-primary me-2">SignUp</a>
-                        <a href="{% url 'login' %}" class="btn btn-outline-secondary">Login</a>
+                        <a href="{% url 'cbv_signup' %}" class="btn btn-outline-primary me-2">SignUp</a>
+                        <a href="{% url 'cbv_login' %}" class="btn btn-outline-secondary">Login</a>
                     </div>
                 {% endif %}
             </div>
